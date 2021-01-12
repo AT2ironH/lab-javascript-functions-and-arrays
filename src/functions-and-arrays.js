@@ -1,18 +1,65 @@
 // Iteration #1: Find the maximum
 
+function maxOfTwoNumbers (num1 , num2){
+if (num1 > num2){
+  return num1;
+}else {
+  return num2;
+}
+}
+
+
 // Iteration #2: Find longest word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
+function findLongestWord (arr){
+  let word = ``;
+  
+  for (let i = 0; i < arr.length; i++) {
+      if (word.length < arr[i].length) {
+        word = arr[i];
+      
+    }
+  }
+    return word;
+  }
 
 // Iteration #3: Calculate the sum
 
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
+function sumNumbers (arr) {
+let total = 0;
+for (i = 0; i < arr.length; i++) {
+total += arr[i];
+}
+  return total;
+}
+
 
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
+function averageNumbers (arr) {
+ let total = 0;
+ for (let i=0; i < arr.length; i++) {
+   total += arr[i];
+ }
+avg = total / arr.length;
+return avg;
+}
+
 
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
+function averageWordLength(arr) {
+  let total = 0;
+  for (let i = 0; i < arr.length; i++) {
+    total +=arr[i].length;
+  }
+  let average = total/arr.length;
+
+return average;
+}
+
 
 // Iteration #5: Unique arrays
 const wordsUnique = [
@@ -28,9 +75,34 @@ const wordsUnique = [
   'simple',
   'bring'
 ];
+function uniquifyArray(arr) {
+let uniqWords = [];
+for (let i = 0; i < arr.length; i++){
+  let presentWords = arr[i];
+  if (uniqWords.indexOf(presentWords) < 0)
+  uniqWords.push(presentWords);
+}
+return uniqWords;
+}
+
+
 
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
+
+function doesWordExist(arr, word) {
+let count = 0;
+for (let i = 0; i < arr.length; i++) {
+  if (arr[i] === word) {
+    return true;
+  }
+    
+}
+return false;
+}
+
+
+
 
 // Iteration #7: Count repetition
 const wordsCount = [
